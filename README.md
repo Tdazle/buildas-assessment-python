@@ -96,16 +96,16 @@ POSTGRES_PORT=5432
 ### 4. Build the Docker image
 
 ```bash
-  buildas-assessment> docker compose up --build
-  buildas-assessment> docker-compose exec app flask db init  # Initialize migrations directory (only needed once)
-  buildas-assessment> docker-compose exec app flask db migrate -m "Initial migration"  # Create migration scripts
-  buildas-assessment> docker-compose exec app flask db upgrade  # Apply migrations to the database 
+  buildas-assessment-python> docker compose up --build
+  buildas-assessment-python> docker-compose exec app flask db init  # Initialize migrations directory (only needed once)
+  buildas-assessment-python> docker-compose exec app flask db migrate -m "Initial migration"  # Create migration scripts
+  buildas-assessment-python> docker-compose exec app flask db upgrade  # Apply migrations to the database 
 ```
 
 ### 5. Test the application
 
 ```bash 
-  buildas-assessment> docker-compose exec app flask test
+  buildas-assessment-python> docker-compose exec app flask test
 ```
 
 ### 6. Access the application
